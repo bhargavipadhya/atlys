@@ -1,0 +1,14 @@
+import React from 'react';
+import classes from './Layout.module.scss';
+
+const Layout = ({children}) => {
+    return (
+        <div>
+            <div className={classes.container}>
+                {children}
+            </div>
+        </div>
+    );
+};
+
+export default Layout;

@@ -1,0 +1,17 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  font-family: $inter;
+  //background: $bg;
+  color: $mainFontColor;
+}
+
+#root {
+  height: 100%;
+}

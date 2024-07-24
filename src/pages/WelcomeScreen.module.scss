@@ -1,0 +1,15 @@
+@import './../styles/variables';
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__shape {
+    flex-basis: 50%;
+    font-size: $font-24;
+    width: 100%;
+    margin-right: -8px;
+    margin-top: -8px;
+  }
+}

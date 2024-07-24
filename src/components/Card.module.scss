@@ -1,0 +1,49 @@
+@import './../styles/variables';
+
+.card {
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  padding: $spacing-24;
+  background: $containerBg;
+  text-align: center;
+  width: 415px;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, $borderColor1, $borderColor2);
+  // figure out border radius later
+
+  .welcomeText {
+    color: $secondaryFontColor;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: $spacing-8;
+    margin-top: $spacing-40;
+    font-size: $font-14;
+  }
+
+  .loginText {
+    font-weight: $fw-600;
+    font-size: $font-18;
+    margin-bottom: 45px;
+  }
+
+  .registerText {
+    text-align: left;
+    font-size: $font-14;
+    font-weight: $fw-500;
+    color: $logoColor;
+    margin-top: $spacing-12;
+    display: flex;
+
+    a {
+      margin-left: 4px;
+      text-decoration: none;
+      color: $mainFontColor;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+}

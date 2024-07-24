@@ -1,0 +1,25 @@
+@import './../styles/variables';
+
+//.buttonContainer {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  width: 100%;
+
+  .button {
+    background: $primary;
+    padding: $spacing-12;
+    color: $mainFontColor;
+    width: 100%;
+    font-size: $font-16;
+    line-height: 19.36px;
+    font-weight: $fw-500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+//}
+
+//<div className={classes.buttonContainer}>
+//<button className={classes.button}>{buttonText}</button>
+//</div>

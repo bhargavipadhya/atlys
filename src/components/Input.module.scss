@@ -1,0 +1,53 @@
+@import './../styles/variables';
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &__label {
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: $font-14;
+    font-weight: $fw-500;
+    color: $logoColor;
+  }
+
+  &__labelPassword {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: $font-14;
+    font-weight: $fw-500;
+    color: $logoColor;
+
+    .forgotPassword {
+      font-size: $font-12;
+      cursor: pointer;
+    }
+  }
+
+
+  &__container {
+    width: 100%;
+    position: relative;
+
+    &__field {
+      width: 100%;
+      padding: $spacing-12;
+      font-size: $font-16;
+      border-radius: 4px;
+      background: transparent;
+      border: 1.5px solid $inputBorderColor;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+}
