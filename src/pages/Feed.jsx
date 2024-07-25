@@ -41,9 +41,9 @@ const Feed = () => {
             <p className={classes.feed__introText}>How are you doing today? Would you like to share something with the community 🤗</p>
             {createPost()}
             {feedData.map(feed => (
-                <FeedCard feed={feed} toggleModal={toggleModal}/>
+                <FeedCard feed={feed} toggleModal={toggleModal} modalOpen={modal} />
             ))}
-            {modal && <Modal toggleModal={toggleModal} pathname={pathname}/> }
+            {modal && <Modal modalOpen={modal} toggleModal={toggleModal} pathname={pathname} /> }
         </div>
     );
 };

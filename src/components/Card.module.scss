@@ -13,11 +13,41 @@
 .card {
   padding: $spacing-40 $spacing-24;
   text-align: center;
-  //width: 415px;
   width: 60vw;
+
+  &__animateIn {
+    opacity: 1;
+    animation: fadeIn 0.5s linear;
+
+    @keyframes fadeIn {
+      0% { opacity: 0 }
+      100% { opacity: 1 }
+    }
+  }
+
+  &__animateOut {
+    //opacity: 1;
+    animation: fadeOut 2s linear;
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+  }
 
   @media screen and (max-width: 600px) {
     width: 80vw;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    width: 50vw;
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 40vw;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 30vw;
   }
 
   .welcomeText {
@@ -32,6 +62,10 @@
     font-weight: $fw-600;
     font-size: $font-18;
     margin-bottom: 45px;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   .registerText {

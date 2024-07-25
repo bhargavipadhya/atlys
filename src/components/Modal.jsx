@@ -3,7 +3,7 @@ import classes from './Modal.module.scss';
 import { IoClose } from "react-icons/io5";
 import Card from "./Card";
 
-const Modal = ({toggleModal, pathname}) => {
+const Modal = ({modalOpen, toggleModal, pathname}) => {
 
     const [register, setRegister] = useState(true);
 
@@ -19,6 +19,7 @@ const Modal = ({toggleModal, pathname}) => {
                       register={register}
                       handleBtnClick={handleBtnClick}
                       toggleModal={toggleModal}
+                      modalOpen={modalOpen}
                 />
                 <div className={classes.modalContent__closeModal} onClick={toggleModal}>
                     <IoClose/>

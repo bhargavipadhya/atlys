@@ -3,9 +3,9 @@ import classes from './FeedCard.module.scss';
 import { FaRegMessage } from "react-icons/fa6";
 import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 
-const FeedCard = ({ feed, toggleModal }) => {
+const FeedCard = ({ feed, toggleModal, modalOpen }) => {
     return (
-        <div className={classes.feedCard} key={feed.id} onClick={toggleModal}>
+        <div className={modalOpen ? `${classes.feedCard} ${classes.feedCard__animateIn}` : `${classes.feedCard} ${classes.feedCard__animateOut}`} key={feed.id} onClick={toggleModal}>
             <div className={classes.feedCard__user}>
 
                 <div className={classes.feedCard__user__info}>

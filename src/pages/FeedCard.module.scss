@@ -9,6 +9,31 @@
   border-radius: 8px;
   cursor: pointer;
 
+  &__animateIn {
+    animation: squeezeIn 0.5s ease forwards;
+    @keyframes squeezeIn {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-1.5%);
+      }
+    }
+  }
+
+  &__animateOut {
+    animation: squeezeOut 0.5s ease forwards;
+    @keyframes squeezeOut {
+      0% {
+        transform: translateY(-1.5%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+
   &__user {
     display: flex;
     justify-content: space-between;

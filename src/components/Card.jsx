@@ -5,10 +5,11 @@ import { FaArrowRight } from "react-icons/fa";
 import Input from "./Input";
 import { Link } from "react-router-dom";
 
-const Card = ({register, toggleModal, pathname, handleBtnClick }) => {
+const Card = ({register, toggleModal, pathname, handleBtnClick, modalOpen }) => {
+    console.log('from card:',modalOpen)
     return (
         <div className={classes.card__borderContainer}>
-            <div className={classes.card}>
+            <div className={pathname !== '/' ?  `${classes.card} ${classes.card__animateIn}` : modalOpen ? `${classes.card} ${classes.card__animateOut}` : classes.card}>
                 <p className={classes.welcomeText}>{register ? 'Sign up' : 'Welcome back'}</p>
                 <p className={classes.loginText}>{register ? 'Create an account to continue' : 'Log in to your account'}</p>
 
