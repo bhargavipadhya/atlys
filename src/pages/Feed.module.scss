@@ -1,0 +1,77 @@
+@import "./../styles/variables";
+
+.feed {
+  //width: 100vw;
+  //height: auto;
+  //margin: 15%;
+  padding: 10%;
+
+  &__helloText {
+    font-size: $font-28;
+    color: $logoColor;
+  }
+
+  &__introText {
+    color: $feedCardTextColor;
+    margin-top: $spacing-12;
+    font-size: $font-16;
+    line-height: 24px;
+  }
+
+  .createPost {
+    margin-top: 40px;
+    width: 700px;
+    background: $containerBg;
+    border: 2px solid $inputBorderColor;
+    padding: 20px;
+    border-radius: 8px;
+
+    &__text {
+      font-size: $font-18;
+      color: $logoColor;
+      font-weight: $fw-500;
+      margin-bottom: $spacing-16;
+    }
+
+    &__inputTextArea {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: $feedCardColorBg;
+      padding: $spacing-16;
+      border-radius: 8px;
+      margin-bottom: $spacing-16;
+
+      &__iconBubble {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: $containerBg;
+        position: relative;
+        cursor: pointer;
+
+        div {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &__placeholder {
+        margin-left: $spacing-16;
+        color: $feedCardTextColor;
+        font-weight: $fw-400;
+        font-size: $font-16;
+      }
+    }
+
+
+    &__button {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  }
+
+}

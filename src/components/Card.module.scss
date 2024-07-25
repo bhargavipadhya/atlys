@@ -1,9 +1,15 @@
 @import './../styles/variables';
 
+//.card-container {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  //margin: 15%;
+//}
+
 .card {
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
+  //margin-top: 45%;
+  //margin-bottom: 45%;
   padding: $spacing-24;
   background: $containerBg;
   text-align: center;
