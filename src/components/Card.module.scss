@@ -1,14 +1,18 @@
 @import './../styles/variables';
 
+.card__borderContainer {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-image: linear-gradient($containerBg, $containerBg),
+  linear-gradient(135deg, $borderColor1, $borderColor2);
+  background-origin: border-box;
+  background-clip: content-box, border-box, padding-box;
+}
+
 .card {
   padding: $spacing-40 $spacing-24;
-  background: $containerBg;
   text-align: center;
   width: 415px;
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, $borderColor1, $borderColor2);
-  // figure out border radius later
 
   .welcomeText {
     color: $secondaryFontColor;

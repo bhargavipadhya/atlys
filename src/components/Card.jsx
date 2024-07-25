@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 
 const Card = ({register, toggleModal, pathname, handleBtnClick }) => {
     return (
+        <div className={classes.card__borderContainer}>
             <div className={classes.card}>
                 <p className={classes.welcomeText}>{register ? 'Sign up' : 'Welcome back'}</p>
                 <p className={classes.loginText}>{register ? 'Create an account to continue' : 'Log in to your account'}</p>
@@ -29,7 +30,7 @@ const Card = ({register, toggleModal, pathname, handleBtnClick }) => {
                     <p className={classes.registerText}>Not registered yet? <a onClick={handleBtnClick}><span>Register</span>&nbsp; <FaArrowRight /></a></p>
                 }
             </div>
-
+        </div>
     );
 };
 
