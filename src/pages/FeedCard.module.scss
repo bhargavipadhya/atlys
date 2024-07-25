@@ -1,8 +1,10 @@
 @import './../styles/variables';
 
 .feedCard {
-  margin-top: 40px;
-  width: 70vw;
+  margin-top: $spacing-16;
+  width: 60vw;
+  max-width: 60vw;
+  min-width: 60vw;
   background: $containerBg;
   border: 2px solid $inputBorderColor;
   padding: 20px;
@@ -11,6 +13,7 @@
 
   &__animateIn {
     animation: squeezeIn 0.5s ease forwards;
+
     @keyframes squeezeIn {
       0% {
         transform: translateY(0);

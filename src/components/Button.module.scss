@@ -5,6 +5,8 @@
    display: flex;
    justify-content: flex-end;
 
+
+
    &__button {
      background: $primary;
      padding: $spacing-12;
@@ -16,5 +18,31 @@
      border: none;
      border-radius: 4px;
      cursor: pointer;
+
+     &__animateIn {
+       animation: increaseWidth ease 0.5s forwards;
+
+       @keyframes increaseWidth {
+         0% {
+           width: 15vw;
+         }
+         100% {
+           width: 17vw;
+         }
+       }
+     }
+
+     &__animateOut {
+       animation: decreaseWidth ease 0.5s forwards;
+
+       @keyframes decreaseWidth {
+         0% {
+           width: 17vw;
+         }
+         100% {
+           width: 15vw;
+         }
+       }
+     }
    }
 }

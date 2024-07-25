@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './Card.module.scss';
 import Button from "./Button";
 import { FaArrowRight } from "react-icons/fa";
 import Input from "./Input";
 import { Link } from "react-router-dom";
+import { IoClose } from "react-icons/io5";
 
 const Card = ({register, toggleModal, pathname, handleBtnClick, modalOpen }) => {
-    console.log('from card:',modalOpen)
+
     return (
         <div className={classes.card__borderContainer}>
             <div className={pathname !== '/' ?  `${classes.card} ${classes.card__animateIn}` : modalOpen ? `${classes.card} ${classes.card__animateOut}` : classes.card}>
@@ -31,6 +32,12 @@ const Card = ({register, toggleModal, pathname, handleBtnClick, modalOpen }) => 
                         <FaArrowRight />
                     </a>
                 </p>
+                {console.log('from card:',modalOpen)}
+                {modalOpen &&
+                <div className={classes.card__closeModal} onClick={toggleModal}>
+                    <IoClose/>
+                </div>}
+
             </div>
         </div>
     );

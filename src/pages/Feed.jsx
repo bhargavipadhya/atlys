@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './Feed.module.scss';
 import Button from "../components/Button";
 import FeedCard from "./FeedCard";
@@ -22,8 +22,12 @@ const Feed = () => {
         document.body.classList.remove('active-modal')
     }
 
+    useEffect(() => {
+        console.log('Modal is toggled to ', modal)
+    }, [modal]);
+
     const createPost = () => (
-        <div className={classes.createPost} onClick={toggleModal}>
+        <div className={modal ? `${classes.createPost} ${classes.createPost__animateIn}` : `${classes.createPost} ${classes.createPost__animateOut}`} onClick={toggleModal}>
             <p className={classes.createPost__text}>Create post</p>
             <div className={classes.createPost__inputTextArea}>
                 <div className={classes.createPost__inputTextArea__iconBubble}>
@@ -31,7 +35,7 @@ const Feed = () => {
                 </div>
                 <div className={classes.createPost__inputTextArea__placeholder}>How are you feeling today?</div>
             </div>
-            <Button buttonText="Post" width="15vw" />
+            <Button buttonText="Post" width="15vw" modalOpen={modal}/>
         </div>
     );
 

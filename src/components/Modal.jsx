@@ -21,9 +21,9 @@ const Modal = ({modalOpen, toggleModal, pathname}) => {
                       toggleModal={toggleModal}
                       modalOpen={modalOpen}
                 />
-                <div className={classes.modalContent__closeModal} onClick={toggleModal}>
-                    <IoClose/>
-                </div>
+                {/*<div className={classes.modalContent__closeModal} onClick={toggleModal}>*/}
+                {/*    <IoClose/>*/}
+                {/*</div>*/}
             </div>
         </>
     );
