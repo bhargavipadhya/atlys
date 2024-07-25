@@ -3,7 +3,7 @@ import classes from './Card.module.scss';
 import Button from "./Button";
 import { FaArrowRight } from "react-icons/fa";
 import Input from "./Input";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Card = ({register, toggleModal, pathname, handleBtnClick }) => {
     return (
@@ -21,14 +21,15 @@ const Card = ({register, toggleModal, pathname, handleBtnClick }) => {
                         <Button buttonText={register ? "Continue" : "Login Now"} width="100%" />
                     </Link>
                     :
-                    register ? <Button buttonText="Continue" onClickFn={toggleModal} width="100%" /> : <Button buttonText="Login Now" onClickFn={toggleModal} width="100%" />
+                    <Button buttonText={register ? "Continue" : "Login Now"} onClickFn={toggleModal} width="100%" />
                 }
 
-                {register ?
-                    <p className={classes.registerText}>Already have an account? <a onClick={handleBtnClick}><span>Login</span>&nbsp; <FaArrowRight /></a></p>
-                     :
-                    <p className={classes.registerText}>Not registered yet? <a onClick={handleBtnClick}><span>Register</span>&nbsp; <FaArrowRight /></a></p>
-                }
+                <p className={classes.registerText}>{register ? "Already have an account?" : "Not registered yet?"}
+                    <a onClick={handleBtnClick}>
+                        <span>{register ? "Login" : "Register"}</span>&nbsp;
+                        <FaArrowRight />
+                    </a>
+                </p>
             </div>
         </div>
     );
