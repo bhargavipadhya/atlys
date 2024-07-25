@@ -5,24 +5,33 @@ import { IoPlayOutline } from "react-icons/io5";
 import { IoIosSquareOutline } from "react-icons/io";
 import classes from './WelcomeScreen.module.scss';
 import Card from "../components/Card";
+import {useLocation} from 'react-router-dom';
 
 const WelcomeScreen = () => {
 
+    const location = useLocation();
+    const { pathname } = location;
+    // console.log(pathname);
+
     const logo = () => (
         <div className={classes.logo}>
-            <span className={classes.logo__shape}><BiRadioCircle /></span>
-            <span className={classes.logo__shape}><IoMdClose /></span>
-            <span className={classes.logo__shape}><IoPlayOutline /></span>
-            <span className={classes.logo__shape}><IoIosSquareOutline /></span>
+            <div className={classes.logo__container}>
+                <div className={classes.logo__container__shape}><BiRadioCircle /></div>
+                <div className={classes.logo__container__shape}><IoMdClose /></div>
+            </div>
+           <div className={classes.logo__container}>
+               <div className={classes.logo__container__shape}><IoPlayOutline /></div>
+               <div className={classes.logo__container__shape}><IoIosSquareOutline /></div>
+           </div>
         </div>
     );
 
 
 
     return (
-        <div>
-            {/*{logo()}*/}
-            <Card/>
+        <div className={classes.welcome}>
+            {logo()}
+            <Card register={null} pathname={pathname}/>
         </div>
     );
 };

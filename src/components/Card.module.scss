@@ -10,7 +10,7 @@
 .card {
   //margin-top: 45%;
   //margin-bottom: 45%;
-  padding: $spacing-24;
+  padding: $spacing-40 $spacing-24;
   background: $containerBg;
   text-align: center;
   width: 415px;
@@ -24,7 +24,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: $spacing-8;
-    margin-top: $spacing-40;
+    //margin-top: $spacing-20;
     font-size: $font-14;
   }
 

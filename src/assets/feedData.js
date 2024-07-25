@@ -1,4 +1,4 @@
-export const feedDate = [
+export const feedData = [
     {
         id: 1,
         name: 'Theresa Webb',

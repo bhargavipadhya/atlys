@@ -1,3 +1,5 @@
+@import './../styles/variables.scss';
+
 body.active-modal {
     overflow-y: hidden;
 }
@@ -9,7 +11,7 @@ body.active-modal {
     font-size: 18px;
 }
 
-.modal, .overlay {
+.overlay {
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -26,20 +28,24 @@ body.active-modal {
 }
 .modal-content {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: 1.4;
-    background: #27292D;
-    padding: 14px 28px;
-    border-radius: 3px;
-    max-width: 600px;
-    min-width: 300px;
+    /*line-height: 1.4;*/
+    /*background: #27292D;*/
+    /*border-radius: 3px;*/
+    /*max-width: 600px;*/
+    /*min-width: 300px;*/
 }
 
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 7px;
+    top: 30px;
+    right: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    background: #131319;
+    cursor: pointer;
 }

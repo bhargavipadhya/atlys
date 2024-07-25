@@ -5,9 +5,9 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { FaRegMessage } from "react-icons/fa6";
 import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 
-const FeedCard = ({ feed }) => {
+const FeedCard = ({ feed, toggleModal }) => {
     return (
-        <div className={classes.feedCard} key={feed.id}>
+        <div className={classes.feedCard} key={feed.id} onClick={toggleModal}>
             <div className={classes.feedCard__user}>
                 {/*<img src=""/>*/}
                 <div className={classes.feedCard__user__info}>
