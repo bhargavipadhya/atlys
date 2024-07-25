@@ -32,7 +32,6 @@ const Card = ({register, toggleModal, pathname, handleBtnClick, modalOpen }) => 
                         <FaArrowRight />
                     </a>
                 </p>
-                {console.log('from card:',modalOpen)}
                 {modalOpen &&
                 <div className={classes.card__closeModal} onClick={toggleModal}>
                     <IoClose/>

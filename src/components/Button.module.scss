@@ -24,10 +24,10 @@
 
        @keyframes increaseWidth {
          0% {
-           width: 15vw;
+           width: 10vw;
          }
          100% {
-           width: 17vw;
+           width: 15vw;
          }
        }
      }
@@ -37,10 +37,10 @@
 
        @keyframes decreaseWidth {
          0% {
-           width: 17vw;
+           width: 15vw;
          }
          100% {
-           width: 15vw;
+           width: 10vw;
          }
        }
      }

@@ -16,14 +16,8 @@ const Feed = () => {
         setModal(!modal);
     };
 
-    if(modal) {
-        document.body.classList.add('active-modal')
-    } else {
-        document.body.classList.remove('active-modal')
-    }
-
     useEffect(() => {
-        console.log('Modal is toggled to ', modal)
+        console.log('Modal is toggled to ', modal);
     }, [modal]);
 
     const createPost = () => (
@@ -35,12 +29,12 @@ const Feed = () => {
                 </div>
                 <div className={classes.createPost__inputTextArea__placeholder}>How are you feeling today?</div>
             </div>
-            <Button buttonText="Post" width="15vw" modalOpen={modal}/>
+            <Button buttonText="Post" width="10vw" modalOpen={modal}/>
         </div>
     );
 
     return (
-        <div className={classes.feed}>
+        <div className={`${classes.feed} ${classes.feed__animate}`}>
             <p className={classes.feed__helloText}>Hello Jane</p>
             <p className={classes.feed__introText}>How are you doing today? Would you like to share something with the community 🤗</p>
             {createPost()}
