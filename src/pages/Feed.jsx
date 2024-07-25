@@ -4,13 +4,15 @@ import Button from "../components/Button";
 import FeedCard from "./FeedCard";
 import {feedData} from "../assets/feedData";
 import Modal from "../components/Modal";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const Feed = () => {
 
     const [modal, setModal] = useState(false);
     const location = useLocation();
     const { pathname } = location;
+    const navigate = useNavigate();
 
     const toggleModal = () => {
         setModal(!modal);
@@ -34,7 +36,8 @@ const Feed = () => {
     );
 
     return (
-        <div className={`${classes.feed} ${classes.feed__animate}`}>
+        <div className={`${classes.feed} `}>
+            <small onClick={() => navigate(-1)} className={classes.feed__goBack}><MdKeyboardArrowLeft /> <span>Go back</span></small>
             <p className={classes.feed__helloText}>Hello Jane</p>
             <p className={classes.feed__introText}>How are you doing today? Would you like to share something with the community 🤗</p>
             {createPost()}

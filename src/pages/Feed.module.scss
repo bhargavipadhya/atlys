@@ -12,9 +12,18 @@
     }
   }
 
+  &__goBack {
+    cursor: pointer;
+    color: $feedCardTextColor;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+  }
+
   &__helloText {
     font-size: $font-28;
     color: $logoColor;
+    margin-top: $spacing-8;
   }
 
   &__introText {
