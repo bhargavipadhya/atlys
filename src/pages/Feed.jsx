@@ -8,7 +8,7 @@ import {useLocation} from "react-router-dom";
 
 const Feed = () => {
 
-    const [modal, setModal] = useState(false);
+    const [modal, setModal] = useState(true);
     const location = useLocation();
     const { pathname } = location;
 

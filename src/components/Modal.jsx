@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import classes from './Modal.module.scss';
 import { IoClose } from "react-icons/io5";
 import Card from "./Card";
-import './LoginModal.css';
 
 const Modal = ({toggleModal, pathname}) => {
 
@@ -14,14 +13,14 @@ const Modal = ({toggleModal, pathname}) => {
 
     return (
         <>
-            <div onClick={toggleModal} className="overlay"/>
-            <div className="modal-content">
+            <div onClick={toggleModal} className={classes.overlay}/>
+            <div className={classes.modalContent}>
                 <Card pathname={pathname}
                       register={register}
                       handleBtnClick={handleBtnClick}
                       toggleModal={toggleModal}
                 />
-                <div className="close-modal" onClick={toggleModal}>
+                <div className={classes.modalContent__closeModal} onClick={toggleModal}>
                     <IoClose/>
                 </div>
             </div>
