@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Button from "./components/Button";
+import React  from 'react'
+import { Routes, Route } from "react-router-dom";
 import WelcomeScreen from "./pages/WelcomeScreen";
 import Layout from "./components/Layout";
 import Feed from "./pages/Feed";

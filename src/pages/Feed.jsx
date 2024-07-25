@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import FeedCard from "./FeedCard";
 import {feedData} from "../assets/feedData";
 import Modal from "../components/Modal";
-import {useLocation} from "react-router";
+import {useLocation} from "react-router-dom";
 
 const Feed = () => {
 

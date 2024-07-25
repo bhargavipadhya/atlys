@@ -11,7 +11,6 @@ const WelcomeScreen = () => {
 
     const location = useLocation();
     const { pathname } = location;
-    // console.log(pathname);
 
     const logo = () => (
         <div className={classes.logo}>
