@@ -1,24 +1,24 @@
 @import './../styles/variables';
 
 .welcome {
-  padding: 9%;
-}
+  .logo {
 
-.logo {
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      &:nth-child(2) {
+        margin-top: -8px;
+        margin-bottom: 15%;
+      }
 
-    &:nth-child(2) {
-      margin-top: -8px;
-      margin-bottom: 15%;
-    }
-
-    &__shape {
-      font-size: $font-24;
-      color: $logoColor;
+      &__shape {
+        font-size: $font-24;
+        color: $logoColor;
+      }
     }
   }
 }
+
+

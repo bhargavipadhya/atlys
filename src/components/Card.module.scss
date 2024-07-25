@@ -1,5 +1,6 @@
 @import './../styles/variables';
 
+// Reference for a linear-gradient border: https://stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient
 .card__borderContainer {
   border: 2px solid transparent;
   border-radius: 8px;
@@ -12,7 +13,12 @@
 .card {
   padding: $spacing-40 $spacing-24;
   text-align: center;
-  width: 415px;
+  //width: 415px;
+  width: 60vw;
+
+  @media screen and (max-width: 600px) {
+    width: 80vw;
+  }
 
   .welcomeText {
     color: $secondaryFontColor;
@@ -45,5 +51,4 @@
       align-items: center;
     }
   }
-
 }

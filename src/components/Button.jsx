@@ -3,9 +3,15 @@ import classes from './Button.module.scss';
 
 const Button = ({ buttonText, width, onClickFn, pathname }) => {
     return (
-        <button className={classes.button} style={{width: width}}
+        <div className={classes.container}>
+            <button
+                className={classes.container__button}
+                style={{width: width}}
                 onClick={onClickFn}
-        >{buttonText}</button>
+            >
+                {buttonText}
+            </button>
+        </div>
     );
 };
 

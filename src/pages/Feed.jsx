@@ -31,9 +31,7 @@ const Feed = () => {
                 </div>
                 <div className={classes.createPost__inputTextArea__placeholder}>How are you feeling today?</div>
             </div>
-            <div className={classes.createPost__button}>
-                <Button buttonText="Post" width="15%" />
-            </div>
+            <Button buttonText="Post" width="15vw" />
         </div>
     );
 
